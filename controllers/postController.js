@@ -20,14 +20,14 @@ const getPost = async (req, res) => {
 }
 
 const createPost = async (req, res) => {
-    let post = {title: req.body.title, body: req.body.body};
-    let sql = "INSERT INTO posts SET ?";
-    db.query(sql, post, (err, result) => {
-        if (err) throw err;
-        res.json({
-            message: "Post Created"
-        });
-    })
+                                    let post = {title: req.body.title, body: req.body.body};
+                                    let sql = "INSERT INTO posts SET ?";
+                                    db.query(sql, post, (err, result) => {
+                                        if (err) throw err;
+                                        res.json({
+                                            message: "Post Created"
+                                        });
+                                    })
 }
 
 const updatePost = async (req, res) => {
